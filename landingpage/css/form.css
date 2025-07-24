@@ -1,0 +1,56 @@
+.form{
+    height: 100%;
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-around;
+     align-items: center;
+     background-color: var(--secundary-color);
+     transition: 1s;
+     
+     
+    
+
+}
+
+.form-login{
+     background-color: #FFFFFF;
+     
+}
+
+.form-register{
+
+    background-color: #FFFFFF;
+    transform: translateX(-100%);
+    z-index: -1;
+    opacity: 0;
+    
+}
+
+.login-container.move .form-login{
+    transform: translateX(100%);
+    
+}
+
+.login-container.move .form-register{
+    transform: translateX(0%);
+    z-index: 1;
+    opacity: 1;
+}
+
+@media (max-width:768px){
+    .form{
+        width: 100%;
+        justify-content: space-evenly;
+    }
+    .form-register{
+        position: absolute;
+        
+        transform: translateX(100%);
+
+    }
+    .login-container.move .form-register{
+        transform: translateX(0%);
+    }
+}
+
